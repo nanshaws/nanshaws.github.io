@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>java17新特性 | 想飞跃的鱼</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/assets/java.png">
+    <meta name="description" content="想飞跃的鱼">
+    <meta name="author" content="nanshaws">
+    <meta name="keywords" content="java9到java21的新特性">
+    
+    <link rel="preload" href="/assets/css/0.styles.9f84806b.css" as="style"><link rel="preload" href="/assets/js/app.1d36426f.js" as="script"><link rel="preload" href="/assets/js/2.4b5f09ed.js" as="script"><link rel="preload" href="/assets/js/1.0d400154.js" as="script"><link rel="preload" href="/assets/js/45.d3519926.js" as="script"><link rel="prefetch" href="/assets/js/10.267a4742.js"><link rel="prefetch" href="/assets/js/11.c62b6b34.js"><link rel="prefetch" href="/assets/js/12.cb880b20.js"><link rel="prefetch" href="/assets/js/13.28539a74.js"><link rel="prefetch" href="/assets/js/14.5ef160ea.js"><link rel="prefetch" href="/assets/js/15.114dfd5c.js"><link rel="prefetch" href="/assets/js/16.6dd77538.js"><link rel="prefetch" href="/assets/js/17.c2838453.js"><link rel="prefetch" href="/assets/js/18.817f6afe.js"><link rel="prefetch" href="/assets/js/19.a0212173.js"><link rel="prefetch" href="/assets/js/20.24f07836.js"><link rel="prefetch" href="/assets/js/21.7f8f7869.js"><link rel="prefetch" href="/assets/js/22.a01aed6c.js"><link rel="prefetch" href="/assets/js/23.ff31a3d6.js"><link rel="prefetch" href="/assets/js/24.1ad789d8.js"><link rel="prefetch" href="/assets/js/25.744b7948.js"><link rel="prefetch" href="/assets/js/26.a02f310c.js"><link rel="prefetch" href="/assets/js/27.4cbcbc4e.js"><link rel="prefetch" href="/assets/js/28.33d5ce3b.js"><link rel="prefetch" href="/assets/js/29.f15ba883.js"><link rel="prefetch" href="/assets/js/3.64ae4e2d.js"><link rel="prefetch" href="/assets/js/30.3fce9df0.js"><link rel="prefetch" href="/assets/js/31.5931e09d.js"><link rel="prefetch" href="/assets/js/32.3e256299.js"><link rel="prefetch" href="/assets/js/33.3bac9f1c.js"><link rel="prefetch" href="/assets/js/34.687b9c65.js"><link rel="prefetch" href="/assets/js/35.6a451474.js"><link rel="prefetch" href="/assets/js/36.25346db5.js"><link rel="prefetch" href="/assets/js/37.5a3a5f66.js"><link rel="prefetch" href="/assets/js/38.a2d8eb46.js"><link rel="prefetch" href="/assets/js/39.24294d0a.js"><link rel="prefetch" href="/assets/js/4.cfdfe92a.js"><link rel="prefetch" href="/assets/js/40.181ef05d.js"><link rel="prefetch" href="/assets/js/41.a3df139e.js"><link rel="prefetch" href="/assets/js/42.8dbbe786.js"><link rel="prefetch" href="/assets/js/43.227cadbd.js"><link rel="prefetch" href="/assets/js/44.a7c5d9c7.js"><link rel="prefetch" href="/assets/js/46.d37c3433.js"><link rel="prefetch" href="/assets/js/47.0780589e.js"><link rel="prefetch" href="/assets/js/5.1ad61789.js"><link rel="prefetch" href="/assets/js/6.cc1ee994.js"><link rel="prefetch" href="/assets/js/7.e16f1193.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.7026204d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9f84806b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="想飞跃的鱼" class="logo"> <span class="site-name can-hide">想飞跃的鱼</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="https://github.com/nanshaws/JavaLearnNote" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/en/guide/" class="nav-link">
+  English
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="https://github.com/nanshaws/JavaLearnNote" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/en/guide/" class="nav-link">
+  English
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>java17新特性</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/java/java17.html#improvements-in-random-number-generator-algorithms-modified-switch-case" class="sidebar-link">Improvements in Random Number Generator algorithms+Modified switch case</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/java/java17.html#deserialization-filtering" class="sidebar-link">Deserialization filtering</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/java/java17.html#reflection-api-for-a-sealed-class" class="sidebar-link">Reflection API for a sealed class</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/java/java17.html#vector-api" class="sidebar-link">Vector API</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="java17新特性"><a href="#java17新特性" class="header-anchor">#</a> java17新特性</h1> <ul><li>Improvements in Random Number Generator algorithms</li> <li>Deserialization filtering</li> <li>Modified switch case</li> <li>Reflection API for a sealed class</li> <li>Vector API</li></ul> <p>中文介绍：</p> <ol><li>随机数生成器算法的改进：在Java 17中，对随机数生成器算法进行了一些改进，以提高性能和减少内存占用。这些改进包括使用更高效的算法和优化了随机数生成器的实现。</li> <li>反序列化过滤：在Java 17中，引入了一个新的特性，允许在反序列化过程中进行过滤操作。这可以防止恶意代码执行或处理不安全的输入数据。</li> <li>修改后的switch case语法：在Java 17中，对switch case语法进行了一些修改，以提供更好的类型安全性和代码可读性。现在可以使用新的switch表达式来简化代码。</li> <li>密封类的反射API：在Java 17中，引入了一个新的反射API，用于支持密封类。密封类是一种限制继承的类，通过反射API可以访问密封类的成员和方法。</li> <li>Vector API：在Java 17中，引入了一个新的Vector API，提供了更灵活和高效的方式来处理向量计算。这个API包括了一些新的方法，如add、subtract、multiply等。</li></ol> <h2 id="improvements-in-random-number-generator-algorithms-modified-switch-case"><a href="#improvements-in-random-number-generator-algorithms-modified-switch-case" class="header-anchor">#</a> Improvements in Random Number Generator algorithms+Modified switch case</h2> <div class="language- extra-class"><pre class="language-text"><code>import java.util.Random;
+import java.util.Vector;
+
+public class Java17Example {
+    public static void main(String[] args) {
+        // 使用改进的随机数生成器算法
+        Random random = new Random();
+        int randomNumber = random.nextInt(10);
+        System.out.println(&quot;Random number: &quot; + randomNumber);
+
+        // 使用修改后的switch case语法
+        int day = 3;
+        String dayName = switch (day) {
+            case 1 -&gt; &quot;Monday&quot;;
+            case 2 -&gt; &quot;Tuesday&quot;;
+            case 3 -&gt; &quot;Wednesday&quot;;
+            case 4 -&gt; &quot;Thursday&quot;;
+            case 5 -&gt; &quot;Friday&quot;;
+            case 6 -&gt; &quot;Saturday&quot;;
+            case 7 -&gt; &quot;Sunday&quot;;
+            default -&gt; &quot;Invalid day&quot;;
+        };
+        System.out.println(&quot;Day name: &quot; + dayName);
+    }
+}
+</code></pre></div><h2 id="deserialization-filtering"><a href="#deserialization-filtering" class="header-anchor">#</a> Deserialization filtering</h2> <div class="language- extra-class"><pre class="language-text"><code>import java.io.*;
+
+public class DeserializationFilterExample {
+    public static void main(String[] args) {
+        // 创建一个包含恶意代码的序列化对象
+        byte[] serializedObject = createSerializedObject();
+
+        // 使用反序列化过滤器进行反序列化
+        try (ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(serializedObject);
+             ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream)) {
+            objectInputStream.setObjectInputFilter(new ObjectInputFilter() {
+                @Override
+                public Status checkInput(FilterInfo filterInfo) {
+                    if (filterInfo.references() &gt; 0) {
+                        return Status.REJECTED; // 拒绝包含引用的对象
+                    } else {
+                        return Status.ALLOWED; // 允许其他对象
+                    }
+                }
+            });
+
+            Object deserializedObject = objectInputStream.readObject();
+            System.out.println(&quot;Deserialized object: &quot; + deserializedObject);
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static byte[] createSerializedObject() {
+        // 创建包含恶意代码的序列化对象
+        // 示例省略
+        return null;
+    }
+}
+</code></pre></div><p>​        在这个例子中，我们首先创建了一个包含恶意代码的序列化对象。然后，我们使用<code>ObjectInputStream</code>进行反序列化，并设置了一个自定义的反序列化过滤器。在过滤器中，我们检查对象的引用数量，如果大于0，则拒绝该对象；否则，允许其他对象。通过这种方式，我们可以防止恶意代码执行或处理不安全的输入数据。</p> <h2 id="reflection-api-for-a-sealed-class"><a href="#reflection-api-for-a-sealed-class" class="header-anchor">#</a> Reflection API for a sealed class</h2> <div class="language- extra-class"><pre class="language-text"><code>import java.lang.reflect.Method;
+
+public class SealedClassReflectionExample {
+    public static void main(String[] args) {
+        // 获取密封类的方法
+        Method sealedMethod = getSealedMethod();
+
+        // 调用密封类的方法
+        try {
+            Object result = sealedMethod.invoke(null);
+            System.out.println(&quot;Result: &quot; + result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static Method getSealedMethod() {
+        // 获取密封类的方法
+        // 示例省略
+        return null;
+    }
+}
+</code></pre></div><h2 id="vector-api"><a href="#vector-api" class="header-anchor">#</a> Vector API</h2> <div class="language- extra-class"><pre class="language-text"><code>package org.cyl.spaceutils;
+ 
+import jdk.incubator.vector.FloatVector;
+import jdk.incubator.vector.VectorSpecies;
+ 
+public class VectorScalarOperations {
+    public static void main(String[] args) {
+        // 定义矢量a和b
+        float[] a = {1, 2, 3};
+        float[] b = {4, 5, 6};
+        float[] c=new float[a.length];
+        VectorScalarOperations v1=new VectorScalarOperations();
+        long startTime = System.nanoTime();
+        v1.vectorComputation(a,b,c);
+        long endTime = System.nanoTime();
+        System.out.println(&quot;矢量花费的时间:&quot;+(endTime-startTime));
+ 
+        long startTime1 = System.nanoTime();
+        v1.xadd(a,b,c);
+        long endTime1 = System.nanoTime();
+        System.out.println(&quot;标量花费的时间:&quot;+(endTime1-startTime1));
+ 
+    }
+ 
+    static final VectorSpecies&lt;Float&gt; SPECIES = FloatVector.SPECIES_PREFERRED;
+    void vectorComputation(float[] a, float[] b, float[] c) {
+        int i = 0;
+        int upperBound = SPECIES.loopBound(a.length);
+        for (; i &lt; upperBound; i += SPECIES.length()) {
+            // FloatVector va, vb, vc;
+            var va = FloatVector.fromArray(SPECIES, a, i);
+            var vb = FloatVector.fromArray(SPECIES, b, i);
+            var vc = va.mul(va)
+                    .add(vb.mul(vb));
+            vc.intoArray(c, i);
+        }
+    }
+ 
+    void xadd(float[]a,float[]b,float[]c){
+        for (int i=0;i&lt;a.length;i++){
+            c[i] = (a[i] * a[i] + b[i] * b[i]) * -1.0f;
+        }
+    }
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">3/30/2024, 12:02:13 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.1d36426f.js" defer></script><script src="/assets/js/2.4b5f09ed.js" defer></script><script src="/assets/js/1.0d400154.js" defer></script><script src="/assets/js/45.d3519926.js" defer></script>
+  </body>
+</html>

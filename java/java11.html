@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>java11新特性 | 想飞跃的鱼</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/assets/java.png">
+    <meta name="description" content="想飞跃的鱼">
+    <meta name="author" content="nanshaws">
+    <meta name="keywords" content="java9到java21的新特性">
+    
+    <link rel="preload" href="/assets/css/0.styles.9f84806b.css" as="style"><link rel="preload" href="/assets/js/app.1d36426f.js" as="script"><link rel="preload" href="/assets/js/2.4b5f09ed.js" as="script"><link rel="preload" href="/assets/js/1.0d400154.js" as="script"><link rel="preload" href="/assets/js/39.24294d0a.js" as="script"><link rel="prefetch" href="/assets/js/10.267a4742.js"><link rel="prefetch" href="/assets/js/11.c62b6b34.js"><link rel="prefetch" href="/assets/js/12.cb880b20.js"><link rel="prefetch" href="/assets/js/13.28539a74.js"><link rel="prefetch" href="/assets/js/14.5ef160ea.js"><link rel="prefetch" href="/assets/js/15.114dfd5c.js"><link rel="prefetch" href="/assets/js/16.6dd77538.js"><link rel="prefetch" href="/assets/js/17.c2838453.js"><link rel="prefetch" href="/assets/js/18.817f6afe.js"><link rel="prefetch" href="/assets/js/19.a0212173.js"><link rel="prefetch" href="/assets/js/20.24f07836.js"><link rel="prefetch" href="/assets/js/21.7f8f7869.js"><link rel="prefetch" href="/assets/js/22.a01aed6c.js"><link rel="prefetch" href="/assets/js/23.ff31a3d6.js"><link rel="prefetch" href="/assets/js/24.1ad789d8.js"><link rel="prefetch" href="/assets/js/25.744b7948.js"><link rel="prefetch" href="/assets/js/26.a02f310c.js"><link rel="prefetch" href="/assets/js/27.4cbcbc4e.js"><link rel="prefetch" href="/assets/js/28.33d5ce3b.js"><link rel="prefetch" href="/assets/js/29.f15ba883.js"><link rel="prefetch" href="/assets/js/3.64ae4e2d.js"><link rel="prefetch" href="/assets/js/30.3fce9df0.js"><link rel="prefetch" href="/assets/js/31.5931e09d.js"><link rel="prefetch" href="/assets/js/32.3e256299.js"><link rel="prefetch" href="/assets/js/33.3bac9f1c.js"><link rel="prefetch" href="/assets/js/34.687b9c65.js"><link rel="prefetch" href="/assets/js/35.6a451474.js"><link rel="prefetch" href="/assets/js/36.25346db5.js"><link rel="prefetch" href="/assets/js/37.5a3a5f66.js"><link rel="prefetch" href="/assets/js/38.a2d8eb46.js"><link rel="prefetch" href="/assets/js/4.cfdfe92a.js"><link rel="prefetch" href="/assets/js/40.181ef05d.js"><link rel="prefetch" href="/assets/js/41.a3df139e.js"><link rel="prefetch" href="/assets/js/42.8dbbe786.js"><link rel="prefetch" href="/assets/js/43.227cadbd.js"><link rel="prefetch" href="/assets/js/44.a7c5d9c7.js"><link rel="prefetch" href="/assets/js/45.d3519926.js"><link rel="prefetch" href="/assets/js/46.d37c3433.js"><link rel="prefetch" href="/assets/js/47.0780589e.js"><link rel="prefetch" href="/assets/js/5.1ad61789.js"><link rel="prefetch" href="/assets/js/6.cc1ee994.js"><link rel="prefetch" href="/assets/js/7.e16f1193.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.7026204d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9f84806b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="想飞跃的鱼" class="logo"> <span class="site-name can-hide">想飞跃的鱼</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="https://github.com/nanshaws/JavaLearnNote" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/en/guide/" class="nav-link">
+  English
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="https://github.com/nanshaws/JavaLearnNote" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/en/guide/" class="nav-link">
+  English
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>java11新特性</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/java/java11.html#nest-based-access-control" class="sidebar-link">Nest-based access control</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/java/java11.html#updates-in-the-reflection-api" class="sidebar-link">Updates in the Reflection API</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/java/java11.html#string-api-updates" class="sidebar-link">String API updates</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/java/java11.html#updates-in-reflective-access-of-the-nested-class" class="sidebar-link">Updates in reflective access of the nested class</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/java/java11.html#local-variable-syntax-for-lambda-parameters" class="sidebar-link">Local variable syntax for lambda parameters</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/java/java11.html#httpclient-standard" class="sidebar-link">HttpClient(Standard)</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/java/java11.html#launch-single-file-sourcecode-program" class="sidebar-link">Launch Single-File SourceCode Program</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="java11新特性"><a href="#java11新特性" class="header-anchor">#</a> java11新特性</h1> <ul><li>Nest-based access control（基于嵌套的访问控制）</li> <li>Updates in the Reflection API（反射API的更新）</li> <li>String API updates（字符串API更新）</li> <li>Updates in reflective access of the nested class（嵌套类的反射访问更新）</li> <li>Local variable syntax for lambda parameters（Lambda参数的局部变量语法）</li> <li>HttpClient(Standard)（标准HttpClient）</li> <li>Launch Single-File SourceCode Program（启动单文件源代码程序）</li></ul> <h2 id="nest-based-access-control"><a href="#nest-based-access-control" class="header-anchor">#</a> Nest-based access control</h2> <p>​        在Java中，嵌套类和接口可以访问其外部类的私有成员。这种访问权限被称为基于嵌套的访问控制。例如：</p> <div class="language- extra-class"><pre class="language-text"><code>class OuterClass {
+    private String privateField = &quot;Private Field&quot;;
+
+    class InnerClass {
+        void accessOuterClass() {
+            System.out.println(privateField);
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        OuterClass outer = new OuterClass();
+        OuterClass.InnerClass inner = outer.new InnerClass();
+        inner.accessOuterClass(); // 输出 &quot;Private Field&quot;
+    }
+}
+</code></pre></div><h2 id="updates-in-the-reflection-api"><a href="#updates-in-the-reflection-api" class="header-anchor">#</a> Updates in the Reflection API</h2> <p>​         Java 9引入了模块系统，这导致了一些反射API的更改。例如，<code>java.lang.reflect.Proxy</code>类现在有一个名为<code>getProxyClass</code>的新方法，用于获取代理类的<code>Class</code>对象。此外，<code>java.lang.reflect.Method</code>类现在有一个名为<code>isModule</code>的方法，用于检查方法是否属于某个模块。</p> <h2 id="string-api-updates"><a href="#string-api-updates" class="header-anchor">#</a> String API updates</h2> <p>​       Java 11引入了一些新的字符串API，如<code>strip()</code>, <code>isBlank()</code>, <code>repeat()</code>等。例如：</p> <div class="language- extra-class"><pre class="language-text"><code>public class Main {
+    public static void main(String[] args) {
+        String str = &quot; Hello, World! &quot;;
+        System.out.println(str.strip()); // 输出 &quot;Hello, World!&quot;
+        System.out.println(&quot;&quot;.isBlank()); // 输出 true
+        System.out.println(&quot;*&quot;.repeat(5)); // 输出 &quot;*****&quot;
+    }
+}
+</code></pre></div><h2 id="updates-in-reflective-access-of-the-nested-class"><a href="#updates-in-reflective-access-of-the-nested-class" class="header-anchor">#</a> Updates in reflective access of the nested class</h2> <p>​         Java 14引入了一个新的API，允许在运行时访问嵌套类的私有成员。这个API是<code>java.lang.invoke.MethodHandles.Lookup</code>类的一个新方法<code>findAllClasses()</code>。例如：</p> <div class="language- extra-class"><pre class="language-text"><code>import java.lang.invoke.MethodHandles;
+import java.lang.invoke.MethodHandles.Lookup;
+import java.util.Set;
+
+class OuterClass {
+    private static class PrivateNestedClass {
+    }
+}
+
+public class Main {
+    public static void main(String[] args) throws Throwable {
+        Lookup lookup = MethodHandles.lookup();
+        Set&lt;Class&lt;?&gt;&gt; classes = lookup.findAllClasses(OuterClass.class);
+        for (Class&lt;?&gt; clazz : classes) {
+            System.out.println(clazz.getName());
+        }
+    }
+}
+</code></pre></div><h2 id="local-variable-syntax-for-lambda-parameters"><a href="#local-variable-syntax-for-lambda-parameters" class="header-anchor">#</a> Local variable syntax for lambda parameters</h2> <p>​     Java 10引入了一种新的语法，允许在Lambda表达式中使用局部变量。这种语法称为“局部变量语法”。例如：</p> <div class="language- extra-class"><pre class="language-text"><code>List&lt;String&gt; names = Arrays.asList(&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;);
+names.forEach((name) -&gt; System.out.println(name)); // Java 8及更早版本
+names.forEach(name -&gt; System.out.println(name)); // Java 10及更高版本
+</code></pre></div><h2 id="httpclient-standard"><a href="#httpclient-standard" class="header-anchor">#</a> HttpClient(Standard)</h2> <p>​    Java 11引入了一个新的HTTP客户端API，名为<code>java.net.http.HttpClient</code>。这个API提供了一种更简单、更现代的方式来处理HTTP请求。例如：</p> <div class="language- extra-class"><pre class="language-text"><code>import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(&quot;https://www.example.com&quot;))
+                .build();
+        HttpResponse&lt;String&gt; response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        System.out.println(response.body());
+    }
+}
+</code></pre></div><h2 id="launch-single-file-sourcecode-program"><a href="#launch-single-file-sourcecode-program" class="header-anchor">#</a> Launch Single-File SourceCode Program</h2> <p>​        从Java 11开始，可以使用<code>java</code>命令行工具直接运行单个源代码文件。例如，如果你有一个名为<code>HelloWorld.java</code>的文件，只需在命令行中输入<code>java HelloWorld.java</code>即可运行它。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">3/30/2024, 12:02:13 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.1d36426f.js" defer></script><script src="/assets/js/2.4b5f09ed.js" defer></script><script src="/assets/js/1.0d400154.js" defer></script><script src="/assets/js/39.24294d0a.js" defer></script>
+  </body>
+</html>

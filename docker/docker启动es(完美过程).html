@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>docker启动elasticsearch | 想飞跃的鱼</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/assets/java.png">
+    <meta name="description" content="想飞跃的鱼">
+    <meta name="author" content="nanshaws">
+    <meta name="keywords" content="java9到java21的新特性">
+    
+    <link rel="preload" href="/assets/css/0.styles.9f84806b.css" as="style"><link rel="preload" href="/assets/js/app.1d36426f.js" as="script"><link rel="preload" href="/assets/js/2.4b5f09ed.js" as="script"><link rel="preload" href="/assets/js/1.0d400154.js" as="script"><link rel="preload" href="/assets/js/31.5931e09d.js" as="script"><link rel="prefetch" href="/assets/js/10.267a4742.js"><link rel="prefetch" href="/assets/js/11.c62b6b34.js"><link rel="prefetch" href="/assets/js/12.cb880b20.js"><link rel="prefetch" href="/assets/js/13.28539a74.js"><link rel="prefetch" href="/assets/js/14.5ef160ea.js"><link rel="prefetch" href="/assets/js/15.114dfd5c.js"><link rel="prefetch" href="/assets/js/16.6dd77538.js"><link rel="prefetch" href="/assets/js/17.c2838453.js"><link rel="prefetch" href="/assets/js/18.817f6afe.js"><link rel="prefetch" href="/assets/js/19.a0212173.js"><link rel="prefetch" href="/assets/js/20.24f07836.js"><link rel="prefetch" href="/assets/js/21.7f8f7869.js"><link rel="prefetch" href="/assets/js/22.a01aed6c.js"><link rel="prefetch" href="/assets/js/23.ff31a3d6.js"><link rel="prefetch" href="/assets/js/24.1ad789d8.js"><link rel="prefetch" href="/assets/js/25.744b7948.js"><link rel="prefetch" href="/assets/js/26.a02f310c.js"><link rel="prefetch" href="/assets/js/27.4cbcbc4e.js"><link rel="prefetch" href="/assets/js/28.33d5ce3b.js"><link rel="prefetch" href="/assets/js/29.f15ba883.js"><link rel="prefetch" href="/assets/js/3.64ae4e2d.js"><link rel="prefetch" href="/assets/js/30.3fce9df0.js"><link rel="prefetch" href="/assets/js/32.3e256299.js"><link rel="prefetch" href="/assets/js/33.3bac9f1c.js"><link rel="prefetch" href="/assets/js/34.687b9c65.js"><link rel="prefetch" href="/assets/js/35.6a451474.js"><link rel="prefetch" href="/assets/js/36.25346db5.js"><link rel="prefetch" href="/assets/js/37.5a3a5f66.js"><link rel="prefetch" href="/assets/js/38.a2d8eb46.js"><link rel="prefetch" href="/assets/js/39.24294d0a.js"><link rel="prefetch" href="/assets/js/4.cfdfe92a.js"><link rel="prefetch" href="/assets/js/40.181ef05d.js"><link rel="prefetch" href="/assets/js/41.a3df139e.js"><link rel="prefetch" href="/assets/js/42.8dbbe786.js"><link rel="prefetch" href="/assets/js/43.227cadbd.js"><link rel="prefetch" href="/assets/js/44.a7c5d9c7.js"><link rel="prefetch" href="/assets/js/45.d3519926.js"><link rel="prefetch" href="/assets/js/46.d37c3433.js"><link rel="prefetch" href="/assets/js/47.0780589e.js"><link rel="prefetch" href="/assets/js/5.1ad61789.js"><link rel="prefetch" href="/assets/js/6.cc1ee994.js"><link rel="prefetch" href="/assets/js/7.e16f1193.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.7026204d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9f84806b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="想飞跃的鱼" class="logo"> <span class="site-name can-hide">想飞跃的鱼</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link router-link-active">
+  Docker
+</a></div><div class="nav-item"><a href="https://github.com/nanshaws/JavaLearnNote" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/en/guide/" class="nav-link">
+  English
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link router-link-active">
+  Docker
+</a></div><div class="nav-item"><a href="https://github.com/nanshaws/JavaLearnNote" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/en/guide/" class="nav-link">
+  English
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>docker启动elasticsearch</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docker/docker%E5%90%AF%E5%8A%A8es(%E5%AE%8C%E7%BE%8E%E8%BF%87%E7%A8%8B).html#第一步拉镜像" class="sidebar-link">第一步拉镜像</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docker/docker%E5%90%AF%E5%8A%A8es(%E5%AE%8C%E7%BE%8E%E8%BF%87%E7%A8%8B).html#第二步完美的创建容器" class="sidebar-link">第二步完美的创建容器</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docker/docker%E5%90%AF%E5%8A%A8es(%E5%AE%8C%E7%BE%8E%E8%BF%87%E7%A8%8B).html#第三步-检测" class="sidebar-link">第三步，检测</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="content__default"><h1 id="docker启动elasticsearch"><a href="#docker启动elasticsearch" class="header-anchor">#</a> docker启动elasticsearch</h1> <h2 id="第一步拉镜像"><a href="#第一步拉镜像" class="header-anchor">#</a> 第一步拉镜像</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">docker</span> pull elasticsearch:版本号
+</code></pre></div><h2 id="第二步完美的创建容器"><a href="#第二步完美的创建容器" class="header-anchor">#</a> 第二步完美的创建容器</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token number">1</span>.创建挂载目录
+<span class="token function">mkdir</span> es-data
+<span class="token function">mkdir</span> es-plugs
+
+<span class="token number">2</span>.将es-data设置为可以被写入的，因为es创建和启动的时候需要在里面写入一些东西
+<span class="token function">chmod</span> <span class="token number">777</span> es-data
+
+<span class="token number">3</span>.从github上下载ik和pinyin的分词器插件<span class="token punctuation">(</span>可以不选，注意一定要和版本匹配<span class="token punctuation">)</span>
+
+<span class="token number">4</span>.创建网络
+因为我还需要部署kibana容器，需要让es和kibana容器互联。这里先创建一个网络
+<span class="token function">docker</span> network create es-net
+
+<span class="token number">5</span>.创建容器,这里我使用的是elasticsearch:7.12.1
+<span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token punctuation">\</span>
+    <span class="token parameter variable">--name</span> esTest <span class="token punctuation">\</span>
+    <span class="token parameter variable">-e</span> <span class="token string">&quot;ES_JAVA_OPTS=-Xms512m -Xmx521m&quot;</span> <span class="token punctuation">\</span>
+    <span class="token parameter variable">-e</span> <span class="token string">&quot;discovery.type=single-node&quot;</span> <span class="token punctuation">\</span>
+    <span class="token parameter variable">-v</span> es-data:/usr/share/elasticsearch/data <span class="token punctuation">\</span>
+    <span class="token parameter variable">-v</span> es-plugins:/usr/share/elasticsearch/plugins <span class="token punctuation">\</span>
+    <span class="token parameter variable">--privileged</span> <span class="token punctuation">\</span>
+    <span class="token parameter variable">--network</span> es-net <span class="token punctuation">\</span>
+    <span class="token parameter variable">-p</span> <span class="token number">9200</span>:9200 <span class="token punctuation">\</span>
+    <span class="token parameter variable">-p</span> <span class="token number">9300</span>:9300 <span class="token punctuation">\</span>
+elasticsearch:7.12.1
+</code></pre></div><h2 id="第三步-检测"><a href="#第三步-检测" class="header-anchor">#</a> 第三步，检测</h2> <div class="language-bash extra-class"><pre class="language-bash"><code>root:~<span class="token comment"># docker run -d \</span>
+<span class="token operator">&gt;</span>     <span class="token parameter variable">--name</span> esTest <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>     <span class="token parameter variable">-e</span> <span class="token string">&quot;ES_JAVA_OPTS=-Xms512m -Xmx521m&quot;</span> <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>     <span class="token parameter variable">-e</span> <span class="token string">&quot;discovery.type=single-node&quot;</span> <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>     <span class="token parameter variable">-v</span> es-data:/usr/share/elasticsearch/data <span class="token punctuation">\</span>
+   <span class="token parameter variable">-v</span> es<span class="token operator">&gt;</span>     <span class="token parameter variable">-v</span> es-plugins:/usr/share/elasticsearch/plugins <span class="token punctuation">\</span>
+ --privi<span class="token operator">&gt;</span>     <span class="token parameter variable">--privileged</span> <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>     <span class="token parameter variable">--network</span> es-net <span class="token punctuation">\</span>
+   <span class="token parameter variable">-p</span> <span class="token number">9</span><span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>     <span class="token parameter variable">-p</span> <span class="token number">9200</span>:9200 <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>     <span class="token parameter variable">-p</span> <span class="token number">9300</span>:9300 <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span> elasticsearch:7.12.1
+1d35d8d89fef1e343cbedd850dd176ef1f4e4150e81b7763d0f86c9e13c2a8ed
+root:~<span class="token comment"># docker ps</span>
+CONTAINER ID   IMAGE                  COMMAND                  CREATED              STATUS              PORTS                                            NAMES
+1d35d8d89fef   elasticsearch:7.12.1   <span class="token string">&quot;/bin/tini -- /usr/l…&quot;</span>   About a minute ago   Up About a minute   <span class="token number">0.0</span>.0.0:9200-<span class="token operator">&gt;</span><span class="token number">9200</span>/tcp, <span class="token number">0.0</span>.0.0:9300-<span class="token operator">&gt;</span><span class="token number">9300</span>/tcp   esTest
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">3/29/2024, 4:13:36 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.1d36426f.js" defer></script><script src="/assets/js/2.4b5f09ed.js" defer></script><script src="/assets/js/1.0d400154.js" defer></script><script src="/assets/js/31.5931e09d.js" defer></script>
+  </body>
+</html>
